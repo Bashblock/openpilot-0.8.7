@@ -180,8 +180,8 @@ class CarInterface(CarInterfaceBase):
         ret.lateralParams.torqueBP, ret.lateralParams.torqueV = [[0, 2560, 8000], [0, 2560, 3840]]
         ret.lateralTuning.init('lqr')
         
-        ret.lateralTuning.lqr.scale = 1500.0
-        ret.lateralTuning.lqr.ki = 0.05
+        ret.lateralTuning.lqr.scale = 1200.0
+        ret.lateralTuning.lqr.ki = 0.1
         
         ret.lateralTuning.lqr.a = [0., 1., -0.22619643, 1.21822268]
         ret.lateralTuning.lqr.b = [-1.92006585e-04, 3.95603032e-05]
@@ -209,8 +209,8 @@ class CarInterface(CarInterfaceBase):
         ret.lateralParams.torqueBP, ret.lateralParams.torqueV = [[0, 2564, 8000], [0, 2564, 3840]]
         ret.lateralTuning.init('lqr')
         
-        ret.lateralTuning.lqr.scale = 1500.0
-        ret.lateralTuning.lqr.ki = 0.05
+        ret.lateralTuning.lqr.scale = 1200.0
+        ret.lateralTuning.lqr.ki = 0.09
         
         ret.lateralTuning.lqr.a = [0., 1., -0.22619643, 1.21822268]
         ret.lateralTuning.lqr.b = [-1.92006585e-04, 3.95603032e-05]
@@ -245,8 +245,8 @@ class CarInterface(CarInterfaceBase):
       else:
         ret.lateralTuning.init('lqr')
         
-        ret.lateralTuning.lqr.scale = 1500.0
-        ret.lateralTuning.lqr.ki = 0.05
+        ret.lateralTuning.lqr.scale = 1200.0
+        ret.lateralTuning.lqr.ki = 0.09
         
         ret.lateralTuning.lqr.a = [0., 1., -0.22619643, 1.21822268]
         ret.lateralTuning.lqr.b = [-1.92006585e-04, 3.95603032e-05]
@@ -296,8 +296,8 @@ class CarInterface(CarInterfaceBase):
         ret.lateralParams.torqueBP, ret.lateralParams.torqueV = [[0, 2560, 10000], [0, 2560, 3840]]
         ret.lateralTuning.init('lqr')
         
-        ret.lateralTuning.lqr.scale = 1500.0
-        ret.lateralTuning.lqr.ki = 0.05
+        ret.lateralTuning.lqr.scale = 1200.0
+        ret.lateralTuning.lqr.ki = 0.1
         
         ret.lateralTuning.lqr.a = [0., 1., -0.22619643, 1.21822268]
         ret.lateralTuning.lqr.b = [-1.92006585e-04, 3.95603032e-05]
