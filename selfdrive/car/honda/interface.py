@@ -203,7 +203,7 @@ class CarInterface(CarInterfaceBase):
       if eps_modified:
         ret.lateralParams.torqueBP, ret.lateralParams.torqueV = [[0, 2564, 8000], [0, 2564, 3840]]
         ret.lateralTuning.pid.kpV, ret.lateralTuning.pid.kiV = [[0.3], [0.09]] # 2.5x Modded EPS
-      if eps_modified and use_lqr = True
+      if eps_modified and use_lqr:
         ret.lateralParams.torqueBP, ret.lateralParams.torqueV = [[0, 2564, 8000], [0, 2564, 3840]]
         ret.lateralTuning.init('lqr')
 
@@ -286,7 +286,7 @@ class CarInterface(CarInterfaceBase):
         ret.lateralParams.torqueBP, ret.lateralParams.torqueV = [[0, 2560, 10000], [0, 2560, 3840]]
         ret.lateralTuning.pid.kpV, ret.lateralTuning.pid.kiV = [[0.21], [0.07]]
       
-      if eps_modified and use_lqr = True
+      if eps_modified and use_lqr:
         ret.lateralParams.torqueBP, ret.lateralParams.torqueV = [[0, 2564, 8000], [0, 2564, 3840]]
         ret.lateralTuning.init('lqr')
 
