@@ -4,7 +4,7 @@
         branch = master
 [submodule "opendbc"]
 	path = opendbc
-	url = ../../commaai/opendbc.git
+	url = ../../Aragon7777/opendbc.git
 [submodule "laika_repo"]
 	path = laika_repo
 	url = ../../commaai/laika.git
