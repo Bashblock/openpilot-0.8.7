@@ -582,22 +582,6 @@ EVENTS: Dict[int, Dict[str, Union[Alert, Callable[[Any, messaging.SubMaster, boo
       Priority.LOW, VisualAlert.none, AudibleAlert.none, .0, .1, .1),
   },
 
-  EventName.manualSteeringRequired: {
-    ET.WARNING: Alert(
-      "ACC Mode",
-      "LKAS switched off. Steering required.",
-      AlertStatus.normal, AlertSize.mid,
-      Priority.LOW, VisualAlert.none, AudibleAlert.none, 1., .1, .1),
-  },
-
-  EventName.manualLongitudinalRequired: {
-    ET.WARNING: Alert(
-      "LKAS Mode",
-      "ACC switched off. Accel/brake required.",
-      AlertStatus.normal, AlertSize.mid,
-      Priority.LOW, VisualAlert.none, AudibleAlert.none, 1., 2., 2.),
-  },
-
   EventName.steerSaturated: {
     ET.WARNING: Alert(
       "Steering Torque Limit Reached",
@@ -638,14 +622,6 @@ EVENTS: Dict[int, Dict[str, Union[Alert, Callable[[Any, messaging.SubMaster, boo
     ET.ENABLE: EngagementAlert(AudibleAlert.none),
   },
 
-  EventName.silentButtonEnable: {
-    ET.ENABLE: Alert(
-      "",
-      "",
-      AlertStatus.normal, AlertSize.none,
-      Priority.MID, VisualAlert.none, AudibleAlert.none, .2, 0., 0.),
-  },
-
   EventName.pcmDisable: {
     ET.USER_DISABLE: EngagementAlert(AudibleAlert.none),
   },
@@ -659,15 +635,6 @@ EVENTS: Dict[int, Dict[str, Union[Alert, Callable[[Any, messaging.SubMaster, boo
     ET.NO_ENTRY: NoEntryAlert("Brake Hold Active"),
   },
 
-  EventName.silentBrakeHold: {
-    ET.USER_DISABLE: Alert(
-      "",
-      "",
-      AlertStatus.normal, AlertSize.none,
-      Priority.MID, VisualAlert.none, AudibleAlert.none, .2, 0., 0.),
-    ET.NO_ENTRY: NoEntryAlert("Brake Hold Active"),
-  },
-
   EventName.parkBrake: {
     ET.USER_DISABLE: EngagementAlert(AudibleAlert.none),
     ET.NO_ENTRY: NoEntryAlert("Park Brake Engaged"),
@@ -675,16 +642,6 @@ EVENTS: Dict[int, Dict[str, Union[Alert, Callable[[Any, messaging.SubMaster, boo
 
   EventName.pedalPressed: {
     ET.USER_DISABLE: EngagementAlert(AudibleAlert.none),
-    ET.NO_ENTRY: NoEntryAlert("Pedal Pressed During Attempt",
-                              visual_alert=VisualAlert.brakePressed),
-  },
-
-  EventName.silentPedalPressed: {
-    ET.USER_DISABLE: Alert(
-      "",
-      "",
-      AlertStatus.normal, AlertSize.none,
-      Priority.MID, VisualAlert.none, AudibleAlert.none, .2, 0., 0.),
     ET.NO_ENTRY: NoEntryAlert("Pedal Pressed During Attempt",
                               visual_alert=VisualAlert.brakePressed),
   },
@@ -754,19 +711,6 @@ EVENTS: Dict[int, Dict[str, Union[Alert, Callable[[Any, messaging.SubMaster, boo
   EventName.wrongGear: {
     ET.SOFT_DISABLE: SoftDisableAlert("Gear not D"),
     ET.NO_ENTRY: NoEntryAlert("Gear not D"),
-  },
-
-  EventName.silentWrongGear: {
-    ET.SOFT_DISABLE: Alert(
-      "Gear not D",
-      "openpilot Unavailable",
-      AlertStatus.normal, AlertSize.mid,
-      Priority.LOW, VisualAlert.none, AudibleAlert.none, 0., 2., 3.),
-    ET.NO_ENTRY: Alert(
-      "Gear not D",
-      "openpilot Unavailable",
-      AlertStatus.normal, AlertSize.mid,
-      Priority.LOW, VisualAlert.none, AudibleAlert.none, 0., 2., 3.),
   },
 
   # This alert is thrown when the calibration angles are outside of the acceptable range.
