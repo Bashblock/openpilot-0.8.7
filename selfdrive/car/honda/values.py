@@ -19,7 +19,7 @@ class CarControllerParams():
       self.STEER_LOOKUP_V = [v * -1 for v in CP.lateralParams.torqueV][1:][::-1] + list(CP.lateralParams.torqueV)
 
       self.BOSCH_ACCEL_LOOKUP_BP = [-1., 0., 0.6]
-      self.BOSCH_ACCEL_LOOKUP_V = [-4.8, 0., 2.]
+      self.BOSCH_ACCEL_LOOKUP_V = [-3.5, 0., 2.]
       self.BOSCH_GAS_LOOKUP_BP = [0., 0.6]
       self.BOSCH_GAS_LOOKUP_V = [0, 2000]
 
