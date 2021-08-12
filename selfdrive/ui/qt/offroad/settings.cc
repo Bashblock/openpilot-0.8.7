@@ -73,6 +73,11 @@ TogglesPanel::TogglesPanel(QWidget *parent) : QWidget(parent) {
                                   "In this mode openpilot will ignore lanelines and just drive how it thinks a human would.",
                                   "../assets/offroad/icon_road.png",
                                   this));
+ toggles.append(new ParamControl("DisableRadar",
+                                  "Use Vision ACC",
+                                  "In this mode openpilot will ignore built in radar and just use vision for longitudinal control.",
+                                  "../assets/offroad/icon_road.png",
+                                  this));
 
 #ifdef ENABLE_MAPS
   toggles.append(new ParamControl("NavSettingTime24h",
