@@ -1,4 +1,4 @@
-Version 0.8.8 (2021-08-XX)
+Version 0.8.8 (2021-08-XX) fork#
 ========================
  * Hyundai Kona Hybrid 2020 support thanks to haram-KONA!
  * Hyundai Sonata Hybrid 2021 support thanks to Matt-Wash-Burn!
